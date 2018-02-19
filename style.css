@@ -1,0 +1,89 @@
+#pagediv {
+     background-color: #d3d3d3;
+     border-style: solid;
+     border-width: 5px;
+     width: auto;
+     padding: 10px;
+ }
+ #banner {
+     background-color: #fcfaf9;
+     height: 100px;
+     padding: 5px;
+ }
+ #headerLeft {
+     padding-left: 5px;
+     padding-right: 5px;
+     float: left;
+     width: auto;
+     height: 100px;
+ }
+ #headerCenter {
+     margin: auto;
+     height: 100px;
+     width: 100px;
+ }
+ #headerRight {
+     padding-left: 5px;
+     padding-right: 5px;
+     float: right;
+     width: auto;
+     height: 100px;
+ }
+ #tabeldiv {
+     width: auto;
+     background-color: powderblue;
+     border-style: solid;
+     border-width: 2px;
+ }
+ #totalDiv {
+     width: 10%;
+     background-color: yellow;
+     align: right;
+ }
+ #submitdiv {
+     padding: 5px;
+     background-color: yellow;
+     border-width: 1px;
+     border-style: solid;
+     align: auto;
+ }
+ .boldtext {
+     font-weight: bold;
+     text-align: right;
+ }
+ #payments {
+     padding: 5px;
+     background-color: #F8ECE0;
+     border-style: solid;
+     border-width: 1px;
+ }
+ #bx5 {
+     padding: 5px;
+     background-color: #E0E0F8;
+     border-style: solid;
+     border-width: 1px;
+ }
+ #boldHeader {
+     font-weight: bold;
+     font-size: 26px;
+ }
+ .boldRed {
+     font-weight: bold;
+     color: #FF0000;
+     font-size: 26px;
+ }
+ 
+.number {
+  width: 3em;
+}
+.searchTH{
+	padding: 10px;	
+}
+.footerdiv {
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+	color: red;
+	font-size: 18;
+	
+}

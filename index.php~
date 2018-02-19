@@ -1,0 +1,288 @@
+<?php include("/var/www/includes/po-includes.php"); ?>
+
+<html>
+   <head>
+		<link rel="stylesheet" href="style.css">
+      <title>PO Database</title>
+   </head>
+   <body>
+
+	<!--  CREATE PURCHASE ORDER PAGE  -->
+
+<div id="pagediv"> <!-- Page Div -->
+            <a href="search.php"><img src='images/searchicon.png' height='30px' width=auto></a>
+
+	
+        <div id="tabeldiv"><!-- Table Div -->
+	
+	
+            <div id="banner"><!-- banner Div -->
+                <div id="headerLeft"><!-- header Div -->
+                    <h2>Purchase Order Database</h2>
+                    <h3>Create PO</h3>
+                </div> <!-- end header Div -->
+                <div id="headerRight"><!-- header right Div -->
+                    
+                    <span id="boldHeader">PO Number: </span>
+                    <?php    
+                    if (mysqli_connect_errno()) {
+						printf("Connect failed: %s\n", mysqli_connect_error());
+						exit();
+					}
+					else{
+						echo "<span class='boldRed'>";
+						$query = "SELECT id FROM tech_po ORDER by id DESC LIMIT 1";
+						$result = mysqli_query($connection, $query);
+						$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+						$poNumber = $row["id"] + 1 ;
+						if ($poNumber < 100){
+							echo "000" . $poNumber;
+						}
+						else if ($poNumber < 1000 && $poNumber > 99){
+							echo "00" . $poNumber;
+						}
+						echo "</span>";
+					}
+					
+				?>
+				</span>
+				<br />
+				<br />
+                <form action="readytosubmit.php" method="POST">
+				<span class= "boldtext"> Nathan Carlson </span> <br />
+				<span class="boldtext"> Date: <input type=date name="datepurchased" required=required > </span>
+			</div>
+			
+			<div id="headerCenter">
+				<img src="images\logo.png" height="100px" width="100" />
+			</div>
+
+
+		</div>
+		
+      <table>
+	  
+
+         	<tr>
+					<td></td>
+					<th>QTY</th>
+					<th>Item Description</th>
+					<th>Vendor</th>
+					<th>Cost</th>
+
+         	</tr>
+            <tr>
+               <td>1. </td>
+
+               <td><input type="text" name="qty1" size="3" required="required"></td>
+
+               <td><input type="text" name="item1" size="70" required="required"></td>
+			   
+			   <td><input type="text" name="vendor1" size = "25"required="required" ></td>
+
+               <td><input type="text" name="cost1" size="8" required="required" ></td>
+
+            </tr>
+            <tr>
+               <td>2. </td>
+
+               <td><input type="text" name="qty2" size=3></td>
+
+               <td><input type="text" name="item2" size="70"></td>
+			   
+			   <td><input type="text" name="vendor2" size="25"></td>
+
+               <td><input type="text" name="cost2" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>3. </td>
+
+               <td><input type="text" name="qty3" size="3"></td>
+
+               <td><input type="text" name="item3" size="70"></td>
+			   
+			   <td><input type="text" name="vendor3" size = "25"></td>
+
+               <td><input type="text" name="cost3" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>4. </td>
+
+               <td><input type="text" name="qty4" size="3"></td>
+
+               <td><input type="text" name="item4" size="70"></td>
+			   
+			   <td><input type="text" name="vendor4" size = "25"></td>
+
+               <td><input type="text" name="cost4" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>5. </td>
+
+               <td><input type="text" name="qty5" size="3"></td>
+
+               <td><input type="text" name="item5" size="70"></td>
+			   
+			   <td><input type="text" name="vendor5" size = "25"></td>
+
+               <td><input type="text" name="cost5" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>6. </td>
+
+               <td><input type="text" name="qty6" size="3"></td>
+
+               <td><input type="text" name="item6" size="70"></td>
+			   
+			   <td><input type="text" name="vendor6" size = "25"></td>
+
+               <td><input type="text" name="cost6" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>7. </td>
+
+               <td><input type="text" name="qty7" size="3"></td>
+
+               <td><input type="text" name="item7" size="70"></td>
+			   
+			   <td><input type="text" name="vendor7" size = "25"></td>
+
+               <td><input type="text" name="cost7" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>8. </td>
+
+               <td><input type="text" name="qty8" size="3"></td>
+
+               <td><input type="text" name="item8" size="70"></td>
+			   
+			   <td><input type="text" name="vendor8" size = "25"></td>
+
+               <td><input type="text" name="cost8" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>9. </td>
+
+               <td><input type="text" name="qty9" size="3"></td>
+
+               <td><input type="text" name="item9" size="70"></td>
+			   
+			   <td><input type="text" name="vendor9" size = "25"></td>
+
+               <td><input type="text" name="cost9" size="8"></td>
+
+            </tr>
+            <tr>
+               <td>10. </td>
+
+               <td><input type="text" name="qty10" size="3"></td>
+
+               <td><input type="text" name="item10" size="70"></td>
+			   
+			   <td><input type="text" name="vendor10" size = "25"></td>
+
+               <td><input type="text" name="cost10" size="8"></td>
+
+            </tr>
+
+            <tr>
+               <td>11. </td>
+
+               <td><input type="text" name="qty11" size="3"></td>
+
+               <td><input type="text" name="item11" size="70"></td>
+			   
+			   <td><input type="text" name="vendor11" size = "25"></td>
+
+               <td><input type="text" name="cost11" size="8"></td>
+
+            </tr>
+
+            <tr>
+               <td>12. </td>
+
+               <td><input type="text" name="qty12" size="3"></td>
+
+               <td><input type="text" name="item12" size="70"></td>
+			   
+			   <td><input type="text" name="vendor12" size = "25"></td>
+
+               <td><input type="text" name="cost12" size="8"></td>
+		</tr>
+			<tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+      		<td class="boldtext"> Tax: </td>
+      		<td>$<input type="text" name = "tax" size="7" ></td>
+		</tr>
+		
+		</tr>
+			<tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+      		<td class="boldtext"> Shipping: </td>
+      		<td>$<input type="text" name = "shipping" size="7" ></td>
+		</tr>
+
+		</table>
+</div>
+<br />
+<div id="payments">
+<table>
+	<tr>
+		<td class="boldtext"><?php echo "Payment Method: "?> </td>
+		<td><select name="paymentMethod" required="required">
+				<option value="">-- Choose Payment --</option>
+				<option value="Credit Card">Purchasing Card 8805</option>
+				<option value="PayPal">PayPal</option>
+				<option value="Terms">Terms</option>
+				<option value="Cash">Cash</option>
+				<option value="Other">Other</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="boldtext"><?php echo "Account: "?> </td>
+		<td>
+			<select name="account" required="required">
+				<option value="">-- Choose Account --</option>
+				<option value="Technology">Technology</option>
+				<option value="Maintenance">Technology</option>
+				<option value="Finance">Technology</option>
+				<option value="Marketing">Technology</option>
+				<option value="Network">Network</option>
+				<option value="Other">Other</option>
+			</select>
+		</td>
+	</tr>
+</table>
+</div>
+
+<br  />
+
+
+<div id="submitdiv">
+	<table>
+	   <tr>
+		<td><input type="submit" value="Calculate" /></td>
+            	<td><input type="reset" value="RESET FORM" /></td>
+	   </tr>
+         </div> <!-- end table div -->
+      </table>
+</form>
+
+<div class="footertxt"><span class="footertxt">Nathan Carlson | 2018 </span></div>
+</div> <!-- end page div -->
+
+
+   </body>
+</html>

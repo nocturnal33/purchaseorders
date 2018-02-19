@@ -1,0 +1,63 @@
+#pagediv{
+            background-color: #d3d3d3;
+            padding: 10px;
+        }
+        
+        #mainSearch{
+            border-radius: 25px;
+            background-color: #9ddab4;
+            padding: 10px;
+            float: left;
+            width: 30%;
+        }
+        
+        #daterangeSearch{
+            border-radius: 25px;
+            background-color: #7fc6dd;
+            padding: 10px;
+            float: right;
+            width: 30%;
+        }
+        
+        #submitDiv{
+            border-radius: 25px;
+            width: 30%;
+            background-color: #ecd80c;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 10px;
+            margin: auto;
+        }
+        
+        #infoDiv{
+            background-color: #ecf1e1;
+            padding: 10px
+            float: left;
+            
+        }
+        #poInfo{
+            font-size: 25;
+            color: blue;
+            font-weight: bold;
+            
+        }
+        #boldRed{
+            font-size: 25;
+            color: red;
+            font-weight: bold;
+        }
+        
+        .italicfont{
+            font-style: italic;
+            font-size: 15;
+        }
+        .centertext{
+            font-weight: bold;
+            font-size: 25;
+            color: red;
+        }
+        hr{
+            border: 0;
+            border-top: 2px solid #8c8c8c;
+        }
